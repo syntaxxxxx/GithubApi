@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/errorHandlingLayout"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    android:gravity="center"
+    android:visibility="gone"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/erroHandlingText"
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:gravity="center"
         android:textColor="#4A4A4A"
         android:textStyle="bold"
         android:layout_height="wrap_content"
-        tools:text="Something went wrong !"
+        android:text="Something went wrong !"
         tools:ignore="MissingConstraints" />
 
 </LinearLayout>

@@ -27,7 +27,7 @@
             app:cardPreventCornerOverlap="false">
 
             <ImageView
-                android:id="@+id/ivAvatar"
+                android:id="@+id/avatarImage"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:contentDescription="32dp"

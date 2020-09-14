@@ -6,13 +6,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.langitpayment.githubapi.entity.TrendingRepositories
 import com.langitpayment.githubapi.network.Injection
-import com.langitpayment.seller.utils.state.LoaderState
+import com.langitpayment.githubapi.state.LoaderState
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {
 
-    private val _state = MutableLiveData<LoaderState>()
-    val state: LiveData<LoaderState>
+    private val _state = MutableLiveData<LoaderState>() // manipulate
+    val state: LiveData<LoaderState> // read only
         get() = _state
 
     private val _result = MutableLiveData<List<TrendingRepositories>>()
@@ -29,7 +29,7 @@ class MainViewModel : ViewModel() {
 
     fun getRepositories() {
         viewModelScope.launch {
-            _state.value = LoaderState.ShowLoading
+            _state.value = LoaderState.ShowLoading // main thread / background thread => _state.postValue(LoaderState.ShowLoading)
             try {
                 _result.value = Injection.provideGithubApiService().getRepositories()
                 _state.value = LoaderState.HideLoading

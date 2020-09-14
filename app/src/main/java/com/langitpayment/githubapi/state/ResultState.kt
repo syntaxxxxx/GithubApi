@@ -1,4 +1,4 @@
-package com.langitpayment.seller.utils.state
+package com.langitpayment.githubapi.state
 
 sealed class ResultState<out T: Any> {
     data class Success<out T: Any>(val data: T): ResultState<T>()

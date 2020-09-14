@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.langitpayment.githubapi.databinding.ActivityMainBinding
 import com.langitpayment.githubapi.entity.TrendingRepositories
-import com.langitpayment.seller.utils.state.LoaderState
+import com.langitpayment.githubapi.state.LoaderState
 import kotlinx.android.synthetic.main.error_handling_layout.*
 import kotlinx.android.synthetic.main.shimmer_layout.*
 

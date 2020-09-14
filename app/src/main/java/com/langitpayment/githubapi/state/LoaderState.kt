@@ -1,4 +1,4 @@
-package com.langitpayment.seller.utils.state
+package com.langitpayment.githubapi.state
 
 sealed class LoaderState {
     object ShowLoading: LoaderState()
